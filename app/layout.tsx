@@ -10,6 +10,20 @@ export const metadata = {
 	metadataBase: new URL(defaultUrl),
 	title: "Next.js and Supabase Starter Kit",
 	description: "The fastest way to build apps with Next.js and Supabase",
+	openGraph: {
+		title: "Next.js and Supabase Starter Kit",
+		description: "The fastest way to build apps with Next.js and Supabase",
+		url: `${defaultUrl}`,
+		siteName: "Next.js and Supabase Starter Kit",
+		type: "website",
+		images: [
+			{
+				width: 1200,
+				height: 600,
+				alt: "Preview image for Next.js and Supabase",
+			},
+		],
+	},
 };
 
 export const fontSans = FontSans({
