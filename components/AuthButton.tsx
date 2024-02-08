@@ -4,6 +4,7 @@ import { cookies } from "next/headers";
 import { redirect } from "next/navigation";
 import { Button } from "@/components/ui/button";
 import { KeyRound, LogOut } from "lucide-react";
+import { MenubarItem } from "./ui/menubar";
 
 export default async function AuthButton() {
 	const cookieStore = cookies();
@@ -23,24 +24,18 @@ export default async function AuthButton() {
 	};
 
 	return user ? (
-		<div className='flex items-center'>
-			<form action={signOut}>
-				<Button variant={"destructive"}>
-					Logout&nbsp;
-					<LogOut />
-				</Button>
-			</form>
-		</div>
+		<form action={signOut}>
+			<button className='w-full relative flex select-none items-center rounded-sm px-2 py-1.5 text-sm outline-none hover:bg-destructive focus:bg-destructive cursor-pointer focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50'>
+				<span className='w-full text-left'>Logout</span>
+			</button>
+		</form>
 	) : (
-		<Button
-			asChild
-			variant={"default"}>
+		<MenubarItem>
 			<Link
-				href='/login'
-				className='py-2 px-3 flex rounded-md no-underline bg-btn-background hover:bg-btn-background-hover'>
-				Login&nbsp;
-				<KeyRound />
+				className='w-full'
+				href='/login'>
+				Login
 			</Link>
-		</Button>
+		</MenubarItem>
 	);
 }
