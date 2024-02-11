@@ -2,7 +2,7 @@ export default function Logo() {
 	return (
 		<svg
 			aria-label='Vercel logotype'
-			height='22'
+			height='1em'
 			role='img'
 			viewBox='0 0 283 64'>
 			<path
