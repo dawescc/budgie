@@ -2,7 +2,6 @@ import Link from "next/link";
 import { headers, cookies } from "next/headers";
 import { createClient } from "@/utils/supabase/server";
 import { redirect } from "next/navigation";
-import { Button } from "@/components/ui/button";
 
 export default function Login({ searchParams }: { searchParams: { message: string } }) {
 	const signIn = async (formData: FormData) => {
@@ -100,12 +99,7 @@ export default function Login({ searchParams }: { searchParams: { message: strin
 					placeholder='••••••••'
 					required
 				/>
-				<Button variant={"default"}>Sign In</Button>
-				<Button
-					variant={"secondary"}
-					formAction={signUp}>
-					Sign Up
-				</Button>
+				<button>Sign In</button>
 				{searchParams?.message && <p className='mt-4 p-4 bg-foreground/10 text-foreground text-center'>{searchParams.message}</p>}
 			</form>
 		</div>
