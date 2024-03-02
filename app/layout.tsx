@@ -26,13 +26,12 @@ export const metadata = {
 export const fontSans = FontSans({
 	subsets: ["latin"],
 	weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
-	variable: "--font-sans",
 });
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
 	return (
 		<html suppressHydrationWarning>
-			<body className={`font-sans antialiased ${fontSans.variable}`}>{children}</body>
+			<body className={`${fontSans.className} antialiased`}>{children}</body>
 		</html>
 	);
 }
