@@ -1,3 +1,7 @@
 export default function Index() {
-	return <></>;
+	return (
+		<>
+			<div className=''></div>
+		</>
+	);
 }

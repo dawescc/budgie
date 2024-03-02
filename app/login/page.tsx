@@ -38,7 +38,7 @@ export default function Login({ searchParams }: { searchParams: { message: strin
 					/>
 				</div>
 				{searchParams?.message && <p className=''>{searchParams.message}</p>}
-				<button disabled>Sign In</button>
+				<button>Sign In</button>
 			</form>
 		</div>
 	);
