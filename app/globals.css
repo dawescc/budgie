@@ -1,3 +1,30 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+button,
+.button {
+	@apply rounded-lg px-2 py-1 ring-1 ring-inset border-[1px] select-none
+	ring-neutral-500/20 border-neutral-400/100 transition-all ease-linear duration-75
+	bg-white bg-gradient-to-t from-neutral-200 to-neutral-100 font-medium;
+
+	&:not(:disabled) {
+		@apply drop-shadow-sm shadow-inner shadow-white text-neutral-600
+	active:shadow-black/25 active:from-neutral-200 active:to-neutral-200
+	active:border-b-0 active:drop-shadow-none;
+	}
+
+	&:disabled {
+		@apply bg-neutral-300 active:bg-neutral-300 text-neutral-400 border-neutral-300;
+	}
+}
+
+input,
+.input {
+	@apply px-4 py-2  text-base bg-gradient-to-t from-neutral-100 to-neutral-50 rounded-md ring-1 ring-inset ring-neutral-500/50;
+}
+
+label,
+.label {
+	@apply text-[13px] font-medium text-neutral-500;
+}
